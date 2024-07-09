@@ -1,0 +1,24 @@
+[0m14:59:55.872868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ec5790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108b0bc90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108edec90>]}
+
+
+============================== 14:59:55.875154 | 1f2ad888-dd8c-40d4-8f4f-e9ed38aa0de0 ==============================
+[0m14:59:55.875154 [info ] [MainThread]: Running with dbt=1.8.3
+[0m14:59:55.875434 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'profiles_dir': '/Users/CalvinLii/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt init jaffle_shop', 'send_anonymous_usage_stats': 'True'}
+[0m14:59:55.883138 [debug] [MainThread]: Starter project path: /Users/CalvinLii/dbt-env/lib/python3.11/site-packages/dbt/include/starter_project
+[0m14:59:55.886297 [info ] [MainThread]: 
+Your new dbt project "jaffle_shop" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m14:59:55.886470 [info ] [MainThread]: Setting up your profile.
