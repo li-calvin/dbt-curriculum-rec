@@ -1,27 +1,26 @@
-
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'jaffle_shop'
+name: 'curriculum_rec'
 version: '1.0.0'
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'jaffle_shop'
+profile: 'curriculum_rec_connect'
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
 # found in the "models/" directory. You probably won't need to change these!
+# https://docs.getdbt.com/reference/dbt_project.yml
 model-paths: ["models"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
 seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
-
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
-
+# data-paths: ["raw_data"] deprecated so it doesn't work 
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
@@ -29,9 +28,19 @@ clean-targets:         # directories to be removed by `dbt clean`
 # In this example config, we tell dbt to build all models in the example/
 # directory as views. These settings can be overridden in the individual model
 # files using the `{{ config(...) }}` macro.
+# models:
+#   curriculum_rec:
+#     +materialized: view
+#     # Config indicated by + and applies to all files under models/example/
+#     staging:
+#       +materialized: view
+
+
 models:
-  jaffle_shop:
+  curriculum_rec:
     +materialized: view
     # Config indicated by + and applies to all files under models/example/
     staging:
-      +materialized: view
+      kaggle: 
+        +materialized: view
+

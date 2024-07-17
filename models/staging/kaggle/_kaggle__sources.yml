@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: kaggle # arbitrary name 
+    schema: kaggle_curriculum_rec #data set 
+    database: dbt-tutorial-428919 # Name of project id 
+    tables: 
+      - name: kaggle_correlation # table 
+        identifier: kaggle_correlation
+        description: "Data from the kaggle_correlation table in BigQuery"
+      - name: kaggle_content 
+        identifier: kaggle_content
+        description: "Data from the kaggle_content table in BigQuery"
+      - name: kaggle_topic
+        identifier: kaggle_topic
+        description: "Data from the kaggle_topic table in BigQuery"
+
+
+
