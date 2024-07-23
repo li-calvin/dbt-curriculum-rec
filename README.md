@@ -68,4 +68,4 @@ dbt docs generate, and dbt docs serve was used to generate the lineage graph in 
 # Hierarchy Tree 
 ![alt text](https://github.com/li-calvin/dbt-curriculum-rec/blob/main/images/topic_hierarchy_c_000425df0161.png?raw=true)
 
-*Figure 2: Given a content id it will find the hierarchy of all topics correlated to the content*
+*Figure 2: Given a content id it will find the hierarchy of all topics correlated to the content (looks at both parent and children topics)*
