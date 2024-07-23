@@ -1,0 +1,44 @@
+version: 2
+ 
+models: 
+  - name: stg_kaggle__topic
+    description: This model clean up topics data 
+    columns: 
+    - name: id 
+      description: Primary key
+      data_tests: 
+        - unique
+        - not_null
+
+  - name: stg_kaggle__content 
+    description: This model clean up content data 
+    columns: 
+    - name: id 
+      description: Primary key
+      data_tests: 
+        - unique
+        - not_null
+
+  - name: stg_kaggle__correl 
+    description: This model clean up correlation data
+    columns:
+    - name: topic_id
+      data_tests: 
+        - not_null
+        # Maintain referential integrity 
+        - relationships: 
+            to: ref('stg_kaggle__topic')
+            field: id
+    - name: content_id
+      data_tests: 
+        - not_null
+        - relationships: 
+            to: ref('stg_kaggle__content')
+            field: id
+
+
+# https://docs.getdbt.com/docs/build/data-tests
+
+
+
+
