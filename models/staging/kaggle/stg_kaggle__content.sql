@@ -16,3 +16,9 @@ SELECT
     * 
 FROM raw_content
 
+
+
+-- CASE 
+--         WHEN LOWER(copyright_holder) = 'pratham books' THEN 'Pratham Books'
+--         ELSE copyright_holder
+--     END AS content_copyright_holder

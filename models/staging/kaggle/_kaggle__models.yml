@@ -29,6 +29,12 @@ models:
         - relationships: 
             to: ref('stg_kaggle__topic')
             field: id
+    - name: content_id
+      data_tests: 
+        - not_null
+        - relationships: 
+            to: ref('stg_kaggle__content')
+            field: id
 
 
 # https://docs.getdbt.com/docs/build/data-tests
