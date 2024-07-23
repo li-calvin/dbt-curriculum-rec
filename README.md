@@ -22,7 +22,7 @@ dbt-curriculum-rec
 │   │       ├── _kaggle__sources.yml
 │   │       ├── stg_kaggle__topic.sql
 │   │       ├── stg_kaggle__content.sql
-│   │       └── stg_kaggle__correl.sql
+│   │       └── stg_kaggle__correlation.sql
 │   ├── intermediate 
 │   │   ├── education 
 │   │       ├── int_topic_generate_hierarchy.sql 
@@ -60,12 +60,12 @@ dbt docs generate, and dbt docs serve was used to generate the lineage graph in 
 ![alt text](https://github.com/li-calvin/dbt-curriculum-rec/blob/main/images/DAG.png?raw=true)
 
 ## Visualizations 
-# Pie Chart
+### Pie Chart
 ![alt text](https://github.com/li-calvin/dbt-curriculum-rec/blob/main/images/content_distribution_t_efaa6755bf62.png?raw=true)
 
 *Figure 1: Given a topic id find, it shows the percentage breakdown of the kind of content and copyright holder*
 
-# Hierarchy Tree 
+### Hierarchy Tree 
 ![alt text](https://github.com/li-calvin/dbt-curriculum-rec/blob/main/images/topic_hierarchy_c_000425df0161.png?raw=true)
 
 *Figure 2: Given a content id it will find the hierarchy of all topics correlated to the content (looks at both parent and children topics)*
