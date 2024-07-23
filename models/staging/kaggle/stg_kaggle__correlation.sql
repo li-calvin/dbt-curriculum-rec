@@ -1,4 +1,4 @@
--- models/staging/kaggle/stg_kaggle__correl.sql
+-- models/staging/kaggle/stg_kaggle__correlation.sql
 WITH raw_correl AS 
 (
     SELECT 

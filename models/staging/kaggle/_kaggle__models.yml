@@ -19,7 +19,7 @@ models:
         - unique
         - not_null
 
-  - name: stg_kaggle__correl 
+  - name: stg_kaggle__correlation
     description: This model clean up correlation data
     columns:
     - name: topic_id
