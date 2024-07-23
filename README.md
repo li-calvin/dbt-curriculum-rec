@@ -52,6 +52,9 @@ I chose to use python to display the distribution of content kinds and copyright
 
 dbt docs generate, and dbt docs serve was used to generate the lineage graph in DAG.png
 
+## Directed Acyclic Graph
+![alt text](https://github.com/li-calvin/dbt-curriculum-rec/blob/main/DAG.png?raw=true)
+
 
 
 
