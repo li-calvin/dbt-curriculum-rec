@@ -5,7 +5,7 @@ WITH RECURSIVE parent_hierarchy AS (
         t1.val_topic_level, 
         t1.topic_title,
         t1.id_topic AS root_id_topic
-    FROM dbt_curriculum_rec.stg_kaggle__topic t1
+    FROM {{ ref('stg_kaggle__topic') }} t1
 
     UNION ALL
 
@@ -15,7 +15,7 @@ WITH RECURSIVE parent_hierarchy AS (
         t2.val_topic_level, 
         t2.topic_title,
         h.root_id_topic
-    FROM dbt_curriculum_rec.stg_kaggle__topic t2
+    FROM {{ ref('stg_kaggle__topic') }} t2
     JOIN parent_hierarchy h ON t2.id_topic = h.id_topic_parent
 ),
 child_hierarchy AS (
@@ -25,7 +25,7 @@ child_hierarchy AS (
         t1.val_topic_level, 
         t1.topic_title,
         t1.id_topic AS root_id_topic
-    FROM dbt_curriculum_rec.stg_kaggle__topic t1
+    FROM {{ ref('stg_kaggle__topic') }} t1
 
     UNION ALL
 
@@ -35,7 +35,7 @@ child_hierarchy AS (
         t2.val_topic_level, 
         t2.topic_title,
         h.root_id_topic
-    FROM dbt_curriculum_rec.stg_kaggle__topic t2
+    FROM {{ ref('stg_kaggle__topic') }} t2
     JOIN child_hierarchy h ON t2.id_topic_parent = h.id_topic
 ),
 combined_hierarchy AS (
