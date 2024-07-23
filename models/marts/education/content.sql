@@ -4,7 +4,7 @@ content AS (
 ),
 
 correlation AS (
-    SELECT * FROM {{ ref('stg_kaggle__correl') }}
+    SELECT * FROM {{ ref('stg_kaggle__correlation') }}
 ),
 
 hierarchy AS (

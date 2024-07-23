@@ -14,7 +14,7 @@ content AS (
     SELECT * FROM {{ ref('stg_kaggle__content') }}
 ), 
 correlation AS (
-    SELECT * FROM {{ ref('stg_kaggle__correl') }}
+    SELECT * FROM {{ ref('stg_kaggle__correlation') }}
 ), 
 
 topic AS ( 
