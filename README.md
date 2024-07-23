@@ -50,8 +50,7 @@ One feature that I realized wasn't necessary was a macro. I thought that creatin
 
 I chose to use python to display the distribution of content kinds and copyright holders for a specific topic using pie charts. I also utilized networkx to help visualize the topic hierarchy for a piece of content. Content can belong to many topics (origin topics), and the other topics are the super and subtopics. 
 
-
-
+dbt docs generate, and dbt docs serve was used to generate the lineage graph in DAG.png
 
 
 

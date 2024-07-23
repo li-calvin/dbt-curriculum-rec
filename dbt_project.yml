@@ -36,7 +36,7 @@ models:
         +materialized: view
     intermediate:
       education: 
-        +materialized: view
+        +materialized: view # change to ephemeral? 
     marts:
       education: 
         +materialized: table
