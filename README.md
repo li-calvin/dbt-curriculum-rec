@@ -4,6 +4,7 @@ https://www.kaggle.com/competitions/learning-equality-curriculum-recommendations
 ## Folder Structure
 Folder structure 
 dbt-curriculum-rec
+```
 ├── README.md
 ├── analyses
 ├── seeds
@@ -34,7 +35,8 @@ dbt-curriculum-rec
 ├── packages.yml
 ├── snapshots
 └── tests
-    └── 
+```
+
 
 ## Thoughts 
 According to https://docs.getdbt.com/docs/build/seeds, one poor use-case of dbt seeds is loading raw data that has been exported to CSVs. Therefore, it isn't best practice to use seeds in our case. Base models aren't necessary since we aren't joining in separate base tables or unioning disparate but symmetrical sources. 
