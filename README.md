@@ -34,9 +34,13 @@ dbt-curriculum-rec
 │   │       ├── topic.sql 
 ├── packages.yml
 ├── snapshots
-└── tests
+├── visualization.ipynb
+├── preprocessing.ipynb
+└── images 
+    ├── DAG.png
+    ├── topic_hierarchy_c_000425df0161.png
+    └── content_distribution_t_efaa6755bf62.png
 ```
-
 
 ## Thoughts 
 According to https://docs.getdbt.com/docs/build/seeds, one poor use-case of dbt seeds is loading raw data that has been exported to CSVs. Therefore, it isn't best practice to use seeds in our case. Base models aren't necessary since we aren't joining in separate base tables or unioning disparate but symmetrical sources. 
@@ -53,8 +57,15 @@ I chose to use python to display the distribution of content kinds and copyright
 dbt docs generate, and dbt docs serve was used to generate the lineage graph in DAG.png
 
 ## Directed Acyclic Graph
-![alt text](https://github.com/li-calvin/dbt-curriculum-rec/blob/main/DAG.png?raw=true)
+![alt text](https://github.com/li-calvin/dbt-curriculum-rec/blob/main/images/DAG.png?raw=true)
 
+## Visualizations 
+# Pie Chart
+![alt text](https://github.com/li-calvin/dbt-curriculum-rec/blob/main/images/content_distribution_t_efaa6755bf62.png?raw=true)
 
+*Figure 1: Given a topic id find, it shows the percentage breakdown of the kind of content and copyright holder*
 
+# Hierarchy Tree 
+![alt text](https://github.com/li-calvin/dbt-curriculum-rec/blob/main/images/topic_hierarchy_c_000425df0161.png?raw=true)
 
+*Figure 2: Given a content id it will find the hierarchy of all topics correlated to the content*
